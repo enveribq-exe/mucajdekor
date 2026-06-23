@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://enveribq-exe.github.io/mucajdekor/sitemap.xml
+Sitemap: https://mucajdekor.al/sitemap.xml
