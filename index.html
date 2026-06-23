@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUÇAJ DEKOR | Punime Gipsi, Tavane Dekorative &amp; Rikonstruksione në Tiranë</title>
+  <meta name="description" content="MUÇAJ DEKOR ofron punime gipsi, gips karton, tavane dekorative, ndriçim LED, dekore allçiu, bojra dekorative, parket laminat dhe rikonstruksione profesionale në Tiranë. Kërkoni ofertë falas sot." />
+  <meta name="keywords" content="Punime Gipsi Tiranë, Gips Karton Tiranë, Tavane Dekorative Tiranë, Ndriçim i Fshehur LED Tiranë, Dekore Allçiu Tiranë, Bojra Dekorative Tiranë, Patinime dhe Lyerje Tiranë, Parket Laminat Tiranë, Rikonstruksione Apartamentesh Tiranë, Kompani Gipsi Tiranë" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="MUÇAJ DEKOR | Punime Gipsi &amp; Rikonstruksione në Tiranë" />
+  <meta property="og:description" content="Specialistë në punime gipsi, tavane dekorative, ndriçim LED dhe rikonstruksione interieri në Tiranë." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── LOGO-DERIVED PALETTE ──
+       MUÇAJ text:  charcoal  #4A4A52
+       DEKOR text:  warm gold #C9A230
+       Buildings:   gold #C9A230, silver-grey #8C8C96, off-white #E8E4DC
+       Background:  deep charcoal #2C2C34 (not pure black)
+    */
+    :root {
+      --gold:        #C9A230;
+      --gold-light:  #E2C46A;
+      --gold-dark:   #9E7D20;
+      --gold-subtle: rgba(201,162,48,0.12);
+      --charcoal:    #2C2C34;   /* deep logo background */
+      --charcoal-2:  #38383F;
+      --charcoal-3:  #4A4A52;   /* MUÇAJ text colour */
+      --silver:      #8C8C96;   /* silver tower */
+      --grey:        #6B6B72;
+      --light-grey:  #F4F3F0;   /* warm off-white */
+      --white:       #FFFFFF;
+      --font-heading:'Cormorant Garamond', serif;
+      --font-body:   'Montserrat', sans-serif;
+      --transition:  all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { font-family:var(--font-body); color:var(--charcoal-3); background:var(--white); overflow-x:hidden; }
+
+    /* ── NAVBAR ── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      padding:0 2rem; background:transparent; transition:var(--transition);
+    }
+    nav.scrolled {
+      background:rgba(44,44,52,0.97);
+      backdrop-filter:blur(14px);
+      box-shadow:0 2px 28px rgba(0,0,0,0.35);
+    }
+    .nav-inner {
+      max-width:1300px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; height:80px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+    .nav-logo img { height:56px; width:auto; object-fit:contain; }
+    .nav-logo-text {
+      display:none;
+      flex-direction:column; line-height:1;
+    }
+    .nav-logo-text .nl1 {
+      font-family:var(--font-heading); font-size:1.35rem; font-weight:700;
+      color:var(--white); letter-spacing:0.06em;
+    }
+    .nav-logo-text .nl2 {
+      font-family:var(--font-body); font-size:0.62rem; font-weight:700;
+      color:var(--gold); letter-spacing:0.3em; text-transform:uppercase;
+    }
+    .nav-links { display:flex; align-items:center; gap:2.5rem; list-style:none; }
+    .nav-links a {
+      font-size:0.75rem; font-weight:600; letter-spacing:0.14em;
+      text-transform:uppercase; color:rgba(255,255,255,0.82); text-decoration:none;
+      transition:var(--transition);
+    }
+    .nav-links a:hover { color:var(--gold); }
+    .nav-cta {
+      background:var(--gold); color:var(--charcoal) !important;
+      padding:0.55rem 1.4rem; border-radius:2px; transition:var(--transition);
+    }
+    .nav-cta:hover { background:var(--gold-light) !important; }
+
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .hamburger span { width:26px; height:2px; background:var(--white); display:block; transition:var(--transition); }
+
+    .mobile-menu {
+      display:none; position:fixed; inset:0;
+      background:rgba(44,44,52,0.99); z-index:999;
+      flex-direction:column; align-items:center; justify-content:center; gap:2.5rem;
+    }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { font-size:1.4rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--white); text-decoration:none; transition:var(--transition); }
+    .mobile-menu a:hover { color:var(--gold); }
+    .mobile-close { position:absolute; top:1.5rem; right:2rem; background:none; border:none; color:var(--white); font-size:2rem; cursor:pointer; }
+
+    /* ── HERO ── */
+    #hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; }
+    .hero-bg {
+      position:absolute; inset:0;
+      background:
+        linear-gradient(135deg,rgba(44,44,52,0.92) 0%,rgba(44,44,52,0.65) 55%,rgba(201,162,48,0.12) 100%),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1900&q=85&auto=format') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(to bottom,transparent 55%,rgba(44,44,52,0.55));
+    }
+    .hero-content {
+      position:relative; z-index:2;
+      max-width:1300px; margin:0 auto;
+      padding:120px 2rem 4rem;
+    }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:0.7rem;
+      background:rgba(201,162,48,0.14); border:1px solid rgba(201,162,48,0.38);
+      color:var(--gold); font-size:0.7rem; font-weight:700;
+      letter-spacing:0.22em; text-transform:uppercase;
+      padding:0.42rem 1.1rem; border-radius:2px; margin-bottom:2rem;
+    }
+    .hero-badge::before { content:''; width:22px; height:1px; background:var(--gold); }
+    h1 {
+      font-family:var(--font-heading); font-size:clamp(2.4rem,5.5vw,4.4rem);
+      font-weight:600; color:var(--white); line-height:1.13; max-width:820px; margin-bottom:1.5rem;
+    }
+    h1 em { font-style:normal; color:var(--gold); }
+    .hero-sub {
+      font-size:clamp(0.88rem,1.4vw,1.03rem); font-weight:300;
+      color:rgba(255,255,255,0.76); max-width:600px; line-height:1.85; margin-bottom:2.8rem;
+    }
+    .hero-buttons { display:flex; gap:1.2rem; flex-wrap:wrap; }
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:0.6rem;
+      background:var(--gold); color:var(--charcoal);
+      font-size:0.78rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase;
+      padding:1rem 2.2rem; border-radius:2px; text-decoration:none;
+      border:2px solid var(--gold); transition:var(--transition);
+    }
+    .btn-primary:hover { background:var(--gold-light); border-color:var(--gold-light); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:0.6rem;
+      background:transparent; color:var(--white);
+      font-size:0.78rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase;
+      padding:1rem 2.2rem; border-radius:2px; text-decoration:none;
+      border:2px solid rgba(255,255,255,0.45); transition:var(--transition);
+    }
+    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+    .hero-stats {
+      display:flex; gap:3.5rem; margin-top:4rem;
+      padding-top:2.5rem; border-top:1px solid rgba(255,255,255,0.1); flex-wrap:wrap;
+    }
+    .hero-stat-num { font-family:var(--font-heading); font-size:2.5rem; font-weight:700; color:var(--gold); line-height:1; }
+    .hero-stat-label { font-size:0.68rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:0.4rem; }
+
+    .scroll-ind {
+      position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:0.4rem;
+      color:rgba(255,255,255,0.38); font-size:0.62rem; letter-spacing:0.22em;
+      text-transform:uppercase; z-index:2; animation:sbounce 2.2s infinite;
+    }
+    @keyframes sbounce {
+      0%,100%{transform:translateX(-50%) translateY(0)}
+      50%{transform:translateX(-50%) translateY(9px)}
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding:7rem 2rem; }
+    .container { max-width:1300px; margin:0 auto; }
+    .section-label {
+      display:inline-flex; align-items:center; gap:0.8rem;
+      font-size:0.68rem; font-weight:700; letter-spacing:0.28em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:1.1rem;
+    }
+    .section-label::before { content:''; width:28px; height:1px; background:var(--gold); }
+    h2 {
+      font-family:var(--font-heading); font-size:clamp(2rem,4vw,3.3rem);
+      font-weight:600; line-height:1.18; color:var(--charcoal-3); margin-bottom:1.4rem;
+    }
+    h2 em { font-style:normal; color:var(--gold); }
+    .section-text { font-size:0.98rem; line-height:1.88; color:var(--grey); max-width:640px; }
+
+    /* ── RRETH NESH ── */
+    #rreth { background:var(--light-grey); }
+    .rreth-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
+    .rreth-image { position:relative; border-radius:3px; overflow:visible; }
+    .rreth-image img { width:100%; height:560px; object-fit:cover; border-radius:3px; display:block; }
+    .rreth-img-frame {
+      position:absolute; top:-12px; left:-12px; right:12px; bottom:12px;
+      border:1.5px solid var(--gold); border-radius:3px; z-index:0; pointer-events:none;
+    }
+    .rreth-image-badge {
+      position:absolute; bottom:2.5rem; left:-2rem;
+      background:var(--gold); color:var(--charcoal);
+      padding:1.4rem 1.8rem; border-radius:3px;
+      font-family:var(--font-heading); z-index:2;
+      box-shadow:0 8px 32px rgba(201,162,48,0.35);
+    }
+    .rreth-image-badge .num { font-size:2.8rem; font-weight:700; line-height:1; display:block; }
+    .rreth-image-badge .txt { font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
+    .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2.5rem; }
+    .feature-item {
+      display:flex; align-items:center; gap:0.9rem;
+      padding:1rem 1.2rem; background:var(--white); border-radius:3px;
+      border-left:3px solid var(--gold); transition:var(--transition);
+    }
+    .feature-item:hover { box-shadow:0 6px 28px rgba(0,0,0,0.07); transform:translateY(-2px); }
+    .feature-icon {
+      width:34px; height:34px; background:var(--gold-subtle); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .feature-icon svg { width:15px; height:15px; color:var(--gold); }
+    .feature-name { font-size:0.8rem; font-weight:600; color:var(--charcoal-3); }
+
+    /* ── SHËRBIMET ── */
+    #sherbimet { background:var(--charcoal); }
+    #sherbimet .section-label { color:var(--gold); }
+    #sherbimet h2 { color:var(--white); }
+    #sherbimet .section-text { color:rgba(255,255,255,0.5); }
+    .services-grid {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:1px; margin-top:4rem;
+      background:rgba(255,255,255,0.05); border-radius:3px; overflow:hidden;
+    }
+    .service-card {
+      background:rgba(255,255,255,0.025); padding:2.4rem 2rem;
+      transition:var(--transition); position:relative; overflow:hidden;
+    }
+    .service-card::after {
+      content:''; position:absolute; bottom:0; left:0;
+      width:0; height:2px; background:var(--gold); transition:var(--transition);
+    }
+    .service-card:hover { background:rgba(201,162,48,0.07); }
+    .service-card:hover::after { width:100%; }
+    .service-num {
+      font-family:var(--font-heading); font-size:2.8rem; font-weight:700;
+      color:rgba(201,162,48,0.13); line-height:1; margin-bottom:1.1rem;
+    }
+    .service-icon {
+      width:46px; height:46px; background:rgba(201,162,48,0.1); border-radius:3px;
+      display:flex; align-items:center; justify-content:center; margin-bottom:1.1rem;
+    }
+    .service-icon svg { width:21px; height:21px; color:var(--gold); }
+    .service-title { font-size:0.96rem; font-weight:600; color:var(--white); margin-bottom:0.6rem; }
+    .service-desc { font-size:0.81rem; line-height:1.75; color:rgba(255,255,255,0.42); }
+
+    /* ── GALERIA ── */
+    #galeria { background:var(--white); }
+    .gallery-header { text-align:center; margin-bottom:4rem; }
+    .gallery-header .section-label { justify-content:center; }
+    .gallery-header .section-label::before { display:none; }
+    .gallery-header .section-text { margin:0 auto; text-align:center; }
+    .masonry { columns:3; column-gap:1rem; }
+    .masonry-item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; position:relative; }
+    .masonry-item img { width:100%; display:block; transition:transform 0.5s ease; }
+    .masonry-item:hover img { transform:scale(1.04); }
+    .masonry-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(44,44,52,0.75) 0%,transparent 60%);
+      opacity:0; transition:var(--transition);
+      display:flex; align-items:flex-end; padding:1.2rem;
+    }
+    .masonry-item:hover .masonry-overlay { opacity:1; }
+    .masonry-overlay span { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); }
+
+    /* ── INSTAGRAM ── */
+    #instagram { background:var(--light-grey); }
+    .insta-header { text-align:center; margin-bottom:3.5rem; }
+    .insta-header .section-label { justify-content:center; }
+    .insta-header .section-label::before { display:none; }
+    .insta-header h2 { text-align:center; }
+    .insta-header .section-text { margin:0 auto; text-align:center; }
+    .insta-profile-link {
+      display:inline-flex; align-items:center; gap:0.6rem;
+      margin-top:1.2rem;
+      color:var(--gold); text-decoration:none;
+      font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+      transition:var(--transition);
+    }
+    .insta-profile-link:hover { color:var(--gold-dark); }
+    .insta-profile-link svg { width:16px; height:16px; }
+
+    .insta-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.5rem;
+      align-items:start;
+    }
+    .insta-embed-wrap {
+      border-radius:4px;
+      overflow:hidden;
+      background:var(--white);
+      box-shadow:0 4px 24px rgba(44,44,52,0.08);
+      transition:var(--transition);
+    }
+    .insta-embed-wrap:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(44,44,52,0.14); }
+    .insta-embed-wrap .instagram-media {
+      min-width:unset !important;
+      width:100% !important;
+      margin:0 !important;
+      border:none !important;
+      border-radius:0 !important;
+    }
+
+    .insta-follow-cta {
+      text-align:center; margin-top:3rem;
+    }
+    .btn-insta {
+      display:inline-flex; align-items:center; gap:0.8rem;
+      background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+      color:var(--white); font-size:0.78rem; font-weight:700;
+      letter-spacing:0.12em; text-transform:uppercase;
+      padding:1rem 2.4rem; border-radius:2px; text-decoration:none;
+      transition:var(--transition);
+    }
+    .btn-insta:hover { opacity:0.88; transform:translateY(-1px); }
+    .btn-insta svg { width:18px; height:18px; }
+
+    /* ── PROCESI ── */
+    #procesi { background:var(--charcoal); }
+    #procesi .section-label { color:var(--gold); }
+    #procesi h2 { color:var(--white); text-align:center; }
+    .process-header { text-align:center; margin-bottom:4.5rem; }
+    .process-header .section-label { justify-content:center; }
+    .process-header .section-label::before { display:none; }
+    .process-steps { display:flex; gap:0; position:relative; align-items:flex-start; }
+    .process-steps::before {
+      content:''; position:absolute; top:36px; left:10%; right:10%; height:1px;
+      background:linear-gradient(to right,var(--gold),rgba(201,162,48,0.2),var(--gold));
+    }
+    .process-step { flex:1; text-align:center; padding:0 1rem; position:relative; }
+    .step-num {
+      width:72px; height:72px; border-radius:50%;
+      background:var(--charcoal-2); border:2px solid var(--gold);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 1.5rem;
+      font-family:var(--font-heading); font-size:1.5rem; font-weight:700; color:var(--gold);
+      position:relative; z-index:1; transition:var(--transition);
+    }
+    .process-step:hover .step-num { background:var(--gold); color:var(--charcoal); }
+    .step-title { font-size:0.82rem; font-weight:700; color:var(--white); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:0.5rem; }
+    .step-desc { font-size:0.76rem; color:var(--silver); line-height:1.65; }
+
+    /* ── TESTIMONIALE ── */
+    #testimoniale { background:var(--white); }
+    .testimonials-header { text-align:center; margin-bottom:4rem; }
+    .testimonials-header .section-label { justify-content:center; }
+    .testimonials-header .section-label::before { display:none; }
+    .testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .testimonial-card {
+      background:var(--light-grey); border:1px solid rgba(201,162,48,0.12);
+      border-radius:3px; padding:2.5rem; transition:var(--transition);
+    }
+    .testimonial-card:hover { border-color:rgba(201,162,48,0.4); box-shadow:0 8px 32px rgba(0,0,0,0.06); }
+    .quote-icon { font-family:Georgia,serif; font-size:5rem; color:rgba(201,162,48,0.22); line-height:0.5; margin-bottom:1.5rem; display:block; }
+    .testimonial-text { font-size:0.91rem; line-height:1.85; color:var(--grey); margin-bottom:1.8rem; font-style:italic; }
+    .stars { color:var(--gold); font-size:1rem; letter-spacing:0.1em; margin-bottom:1rem; }
+    .testimonial-author { font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--silver); }
+
+    /* ── CTA ── */
+    #cta {
+      background:linear-gradient(135deg,var(--charcoal) 0%,var(--charcoal-2) 60%,#3E3E28 100%);
+      text-align:center; position:relative; overflow:hidden; padding:7rem 2rem;
+    }
+    #cta::before {
+      content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%;
+      background:radial-gradient(ellipse at center,rgba(201,162,48,0.09) 0%,transparent 60%);
+      pointer-events:none;
+    }
+    #cta h2 { color:var(--white); margin:0 auto 1.2rem; max-width:720px; }
+    #cta .section-text { color:rgba(255,255,255,0.58); margin:0 auto 2.8rem; text-align:center; }
+    .cta-divider { width:60px; height:1px; background:var(--gold); margin:0 auto 2.5rem; }
+
+    /* ── KONTAKT ── */
+    #kontakt { background:var(--light-grey); }
+    .kontakt-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:6rem; align-items:start; }
+    .contact-info-items { margin-top:2.5rem; display:flex; flex-direction:column; gap:1.5rem; }
+    .contact-item { display:flex; align-items:center; gap:1.2rem; }
+    .contact-icon {
+      width:48px; height:48px; background:rgba(201,162,48,0.12); border-radius:3px;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .contact-icon svg { width:20px; height:20px; color:var(--gold); }
+    .contact-label { font-size:0.68rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.25rem; }
+    .contact-value { font-size:0.95rem; font-weight:500; color:var(--charcoal-3); }
+    .contact-value a { color:inherit; text-decoration:none; transition:var(--transition); }
+    .contact-value a:hover { color:var(--gold); }
+    .social-links { display:flex; gap:1rem; margin-top:2.5rem; }
+    .social-link {
+      width:44px; height:44px; border:1.5px solid rgba(201,162,48,0.3); border-radius:3px;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--gold); text-decoration:none; transition:var(--transition);
+    }
+    .social-link:hover { background:var(--gold); color:var(--charcoal); border-color:var(--gold); }
+    .social-link svg { width:18px; height:18px; }
+
+    .contact-form { display:flex; flex-direction:column; gap:1.2rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+    .form-group { display:flex; flex-direction:column; gap:0.4rem; }
+    .form-group label { font-size:0.68rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--grey); }
+    .form-group input, .form-group textarea, .form-group select {
+      padding:0.9rem 1.2rem; border:1.5px solid #DEDAD5; border-radius:2px;
+      font-family:var(--font-body); font-size:0.9rem; color:var(--charcoal-3);
+      background:var(--white); outline:none; transition:var(--transition); appearance:none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,162,48,0.1);
+    }
+    .form-group textarea { resize:vertical; min-height:130px; }
+    .btn-submit {
+      align-self:flex-start; display:inline-flex; align-items:center; gap:0.7rem;
+      background:var(--gold); color:var(--charcoal);
+      font-size:0.78rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase;
+      padding:1rem 2.5rem; border:none; border-radius:2px; cursor:pointer;
+      transition:var(--transition); font-family:var(--font-body);
+    }
+    .btn-submit:hover { background:var(--gold-light); }
+
+    /* ── FOOTER ── */
+    footer { background:var(--charcoal); padding:4rem 2rem; }
+    .footer-inner { max-width:1300px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:2rem; }
+    .footer-logo { display:flex; align-items:center; gap:0.8rem; }
+    .footer-logo img { height:52px; width:auto; object-fit:contain; }
+    .footer-logo-text { display:none; flex-direction:column; line-height:1; }
+    .footer-logo-text .fl1 { font-family:var(--font-heading); font-size:1.5rem; font-weight:700; color:var(--white); letter-spacing:0.06em; }
+    .footer-logo-text .fl2 { font-family:var(--font-body); font-size:0.58rem; font-weight:700; color:var(--gold); letter-spacing:0.32em; text-transform:uppercase; margin-top:2px; }
+    .footer-divider { width:60px; height:1px; background:rgba(201,162,48,0.28); }
+    .footer-services { font-size:0.7rem; font-weight:500; letter-spacing:0.1em; color:rgba(255,255,255,0.35); text-align:center; line-height:1.9; }
+    .footer-services span { color:var(--gold); }
+    .footer-bottom { display:flex; align-items:center; justify-content:center; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.06); width:100%; }
+    .footer-copy { font-size:0.7rem; color:rgba(255,255,255,0.28); letter-spacing:0.05em; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position:fixed; bottom:2rem; right:2rem; z-index:500;
+      width:58px; height:58px; background:#25D366; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 24px rgba(37,211,102,0.45); text-decoration:none;
+      transition:var(--transition); animation:wa-pulse 2.6s infinite;
+    }
+    .wa-float:hover { transform:scale(1.1); }
+    .wa-float svg { width:28px; height:28px; color:white; }
+    @keyframes wa-pulse {
+      0%,100%{box-shadow:0 4px 24px rgba(37,211,102,0.45)}
+      50%{box-shadow:0 4px 44px rgba(37,211,102,0.72)}
+    }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){
+      .rreth-grid{grid-template-columns:1fr;gap:3rem}
+      .rreth-image img{height:400px}
+      .rreth-image-badge{left:1rem}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .masonry{columns:2}
+      .testimonials-grid{grid-template-columns:1fr;gap:1rem}
+      .kontakt-grid{grid-template-columns:1fr;gap:3rem}
+      .insta-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:768px){
+      section{padding:5rem 1.5rem}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .hero-stats{gap:2rem}
+      .services-grid{grid-template-columns:1fr}
+      .masonry{columns:1}
+      .process-steps{flex-direction:column;gap:2rem}
+      .process-steps::before{display:none}
+      .features-grid{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      .insta-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="logo.png" alt="MUÇAJ DEKOR"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="nav-logo-text">
+        <span class="nl1">MUÇAJ</span>
+        <span class="nl2">DEKOR</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#rreth">Rreth Nesh</a></li>
+      <li><a href="#sherbimet">Shërbimet</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#rreth"      class="mob-link">Rreth Nesh</a>
+  <a href="#sherbimet"  class="mob-link">Shërbimet</a>
+  <a href="#galeria"    class="mob-link">Galeria</a>
+  <a href="#instagram"  class="mob-link">Instagram</a>
+  <a href="#kontakt"    class="mob-link" style="color:var(--gold)">Kontakt</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Tiranë, Shqipëri</div>
+    <h1>Transformojmë Hapësirat Tuaja me <em>Cilësi</em> dhe <em>Elegancë</em></h1>
+    <p class="hero-sub">Specialistë në Punime Gipsi, Dekore Allçiu, Tavane Dekorative, Ndriçim LED, Bojra Dekorative dhe Rikonstruksione në Tiranë.</p>
+    <div class="hero-buttons">
+      <a href="#kontakt" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>
+        Kërko Ofertë Falas
+      </a>
+      <a href="tel:+355682777728" class="btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 5.25v1.5z"/></svg>
+        Na Kontakto
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">100+</div><div class="hero-stat-label">Projekte të Realizuara</div></div>
+      <div><div class="hero-stat-num">5+</div><div class="hero-stat-label">Vite Eksperiencë</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Klientë të Kënaqur</div></div>
+    </div>
+  </div>
+  <div class="scroll-ind">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+    Zbrit
+  </div>
+</section>
+
+<!-- RRETH NESH -->
+<section id="rreth">
+  <div class="container">
+    <div class="rreth-grid">
+      <div class="rreth-image">
+        <div class="rreth-img-frame"></div>
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=85&auto=format"
+             alt="MUÇAJ DEKOR - Punime Gipsi Tiranë" loading="lazy" />
+        <div class="rreth-image-badge">
+          <span class="num">5+</span>
+          <span class="txt">Vite Eksperiencë</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Rreth Nesh</div>
+        <h2>Pse të Zgjidhni <em>MUÇAJ DEKOR</em>?</h2>
+        <p class="section-text">MUÇAJ DEKOR është një kompani profesionale me bazë në Tiranë, e specializuar në punime gipsi dhe dekorime interieri. Ne ofrojmë zgjidhje moderne dhe cilësi të lartë për banesa, vila, apartamente, lokale, zyra dhe ambiente komerciale. Çdo projekt realizohet me përkushtim maksimal ndaj detajeve dhe standardeve profesionale.</p>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <span class="feature-name">Cilësi Premium</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg></div>
+            <span class="feature-name">Përfundime Perfekte</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg></div>
+            <span class="feature-name">Materiale Profesionale</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <span class="feature-name">Respektim Afatesh</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
+            <span class="feature-name">Garanci Punimesh</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg></div>
+            <span class="feature-name">Konsulencë Falas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHËRBIMET -->
+<section id="sherbimet">
+  <div class="container">
+    <div class="section-label">Shërbimet Tona</div>
+    <h2>Çfarë <em>Ofrojmë</em></h2>
+    <p class="section-text">Zgjidhje të plota për çdo projekt dekori dhe rikonstruksioni, me cilësi premium dhe profesionalizëm të lartë.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
+        <div class="service-title">Punime Gipsi</div>
+        <div class="service-desc">Punime profesionale gipsi për ambiente banimi dhe biznesi. Cilësi e lartë, rezultate të garantuara.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg></div>
+        <div class="service-title">Gips Karton (Knauf)</div>
+        <div class="service-desc">Mure ndarëse dhe zgjidhje moderne për interier. Sisteme Knauf për çdo nevojë arkitekturore.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></div>
+        <div class="service-title">Tavane Dekorative</div>
+        <div class="service-desc">Dizajne moderne dhe klasike për çdo ambient. Solucionet me tavane false dhe profile dekorative.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg></div>
+        <div class="service-title">Ndriçim i Fshehur LED</div>
+        <div class="service-desc">Zgjidhje elegante për tavane dhe mure dekorative. Ambient i ngrohtë dhe modern me ndriçim të fshehur.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg></div>
+        <div class="service-title">Dekore Allçiu</div>
+        <div class="service-desc">Dekorime artistike dhe elemente arkitekturore. Relieve, korniza dhe dekore të punuara me dorë.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z"/></svg></div>
+        <div class="service-title">Bojra Dekorative</div>
+        <div class="service-desc">Efekte dekorative moderne për mure dhe tavane. Teknika të avancuara me rezultate spektakolare.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg></div>
+        <div class="service-title">Patinime dhe Lyerje</div>
+        <div class="service-desc">Lyerje profesionale dhe përfundime premium. Teknika patinimit për efekte unike dhe elegante.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg></div>
+        <div class="service-title">Parket Laminat</div>
+        <div class="service-desc">Montim profesional parketi për ambiente moderne. Laminate cilësore, dysheme luksoze.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">09</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg></div>
+        <div class="service-title">Rikonstruksione Interieri</div>
+        <div class="service-desc">Transformim total i ambienteve të brendshme. Nga koncepti deri në dorëzim final.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="gallery-header">
+      <div class="section-label">Galeria</div>
+      <h2>Projektet <em>Tona</em></h2>
+      <p class="section-text">Shikoni disa nga punimet tona më të fundit. Çdo projekt tregon angazhimin tonë ndaj cilësisë dhe perfeksionit.</p>
+    </div>
+    <div class="masonry">
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format" alt="Tavan Dekorativ me Ndriçim LED Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Tavan Dekorativ LED</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80&auto=format" alt="Punime Gipsi Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Punime Gipsi</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format" alt="Kuzhinë Moderne Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Kuzhinë Moderne</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80&auto=format" alt="Dhomë Gjumi Luksoze" loading="lazy"/>
+        <div class="masonry-overlay"><span>Dhomë Gjumi</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format" alt="Sallë Ndenjeje Dekorative" loading="lazy"/>
+        <div class="masonry-overlay"><span>Sallë Ndenjeje</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80&auto=format" alt="Banjo Luksoze Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Banjo Luksoze</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&q=80&auto=format" alt="Dekore Allçiu Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Dekore Allçiu</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=600&q=80&auto=format" alt="Rikonstruksion Apartamenti Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Rikonstruksion</span></div>
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=600&q=80&auto=format" alt="Parket Laminat Tiranë" loading="lazy"/>
+        <div class="masonry-overlay"><span>Parket Laminat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM FEED -->
+<section id="instagram">
+  <div class="container">
+    <div class="insta-header">
+      <div class="section-label">Social Media</div>
+      <h2>Na Ndiqni në <em>Instagram</em></h2>
+      <p class="section-text">Shikoni punimet tona të fundit drejtpërdrejt nga Instagram. Çdo foto është dëshmi e cilësisë sonë.</p>
+      <a href="https://www.instagram.com/mucajdekor" target="_blank" rel="noopener" class="insta-profile-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @mucajdekor
+      </a>
+    </div>
+
+    <!-- Instagram Embedded Posts — replace each permalink with your actual post URLs -->
+    <div class="insta-grid">
+
+      <div class="insta-embed-wrap">
+        <blockquote class="instagram-media"
+          data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/mucajdekor/"
+          data-instgrm-version="14"
+          style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        </blockquote>
+      </div>
+
+      <div class="insta-embed-wrap">
+        <blockquote class="instagram-media"
+          data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/mucajdekor/"
+          data-instgrm-version="14"
+          style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        </blockquote>
+      </div>
+
+      <div class="insta-embed-wrap">
+        <blockquote class="instagram-media"
+          data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/mucajdekor/"
+          data-instgrm-version="14"
+          style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        </blockquote>
+      </div>
+
+    </div>
+
+    <div class="insta-follow-cta">
+      <a href="https://www.instagram.com/mucajdekor" target="_blank" rel="noopener" class="btn-insta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Shiko të Gjitha Punimet
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESI -->
+<section id="procesi">
+  <div class="container">
+    <div class="process-header">
+      <div class="section-label">Si Punojmë</div>
+      <h2>Procesi i <em>Punës</em> Sonë</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <div class="step-title">Konsultim Falas</div>
+        <div class="step-desc">Diskutojmë nevojat dhe vizionin tuaj pa asnjë kosto.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <div class="step-title">Vizitë në Objekt</div>
+        <div class="step-desc">Ekipi ynë vjen në ambientet tuaja për vlerësim profesional.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <div class="step-title">Ofertë e Detajuar</div>
+        <div class="step-desc">Ofertë transparente me çmime të qarta dhe afate reale.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <div class="step-title">Fillimi i Punimeve</div>
+        <div class="step-desc">Ekipi profesional fillon punimet sipas planit të rënë dakord.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">5</div>
+        <div class="step-title">Dorëzimi i Projektit</div>
+        <div class="step-desc">Dorëzim i projektit me kontroll cilësie dhe garanci pune.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALE -->
+<section id="testimoniale">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="section-label">Klientët Tanë</div>
+      <h2>Çfarë Thonë <em>Klientët</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <span class="quote-icon">"</span>
+        <p class="testimonial-text">Kualitet i shkëlqyer dhe përfundime perfekte. Punimet e gipsit ishin shumë profesionale dhe tavani dekorativ doli jashtëzakonisht bukur. Rekomandoj MUÇAJ DEKOR pa hezitim!</p>
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-author">— Klient i Kënaqur, Tiranë</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-icon">"</span>
+        <p class="testimonial-text">Punë shumë profesionale dhe respektim i afateve. Rikonstruksioni i apartamentit tonë u krye brenda kohës së planifikuar dhe me cilësi të lartë. Shumë i kënaqur!</p>
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-author">— Pronar Apartamenti, Tiranë</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-icon">"</span>
+        <p class="testimonial-text">Rezultati final ishte më i mirë se sa e kishim imagjinuar. Dekoret e allçiut dhe ndriçimi LED transformuan totalisht ambientet. Faleminderit ekipit të MUÇAJ DEKOR!</p>
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-author">— Pronar Lokali, Tiranë</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">Kontaktoni Sot</div>
+    <h2>Gati për të Transformuar <em>Hapësirën Tuaj</em>?</h2>
+    <div class="cta-divider"></div>
+    <p class="section-text">Na kontaktoni sot për një ofertë falas dhe konsultim profesional. Ekipi ynë është gati t'ju ndihmojë të realizoni projektin tuaj të ëndrrave.</p>
+    <a href="#kontakt" class="btn-primary" style="margin:0 auto;display:inline-flex;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>
+      Kërko Ofertë Falas
+    </a>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="container">
+    <div class="kontakt-grid">
+      <div>
+        <div class="section-label">Kontakti</div>
+        <h2>Na <em>Kontaktoni</em></h2>
+        <p class="section-text">Jemi të disponueshëm çdo ditë për t'iu përgjigjur pyetjeve tuaja dhe për të planifikuar projektin tuaj.</p>
+        <div class="contact-info-items">
+          <div class="contact-item">
+            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 5.25v1.5z"/></svg></div>
+            <div>
+              <div class="contact-label">Telefon &amp; WhatsApp</div>
+              <div class="contact-value"><a href="tel:+355682777728">+355 68 277 7728</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:mucajdekor@gmail.com">mucajdekor@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
+            <div>
+              <div class="contact-label">Adresa</div>
+              <div class="contact-value">Tiranë, Shqipëri</div>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/mucajdekor" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/mucajdekor" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/355682777728" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <!-- Formsubmit.co hidden config -->
+          <input type="hidden" name="_subject" value="Kërkesë e re nga faqja - MUÇAJ DEKOR" />
+          <input type="hidden" name="_next" value="about:blank" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Emri &amp; Mbiemri</label>
+              <input type="text" id="fname" name="name" placeholder="Emri juaj" required />
+            </div>
+            <div class="form-group">
+              <label for="fphone">Numri i Telefonit</label>
+              <input type="tel" id="fphone" name="phone" placeholder="+355 6X XXX XXXX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email (opsionale)</label>
+            <input type="email" id="femail" name="email" placeholder="email@juaj.com" />
+          </div>
+          <div class="form-group">
+            <label for="fservice">Shërbimi i Kërkuar</label>
+            <select id="fservice" name="service">
+              <option value="">Zgjidhni shërbimin...</option>
+              <option>Punime Gipsi</option>
+              <option>Gips Karton (Knauf)</option>
+              <option>Tavane Dekorative</option>
+              <option>Ndriçim i Fshehur LED</option>
+              <option>Dekore Allçiu</option>
+              <option>Bojra Dekorative</option>
+              <option>Patinime dhe Lyerje</option>
+              <option>Parket Laminat</option>
+              <option>Rikonstruksion Interieri</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Mesazhi</label>
+            <textarea id="fmsg" name="message" placeholder="Përshkruani projektin tuaj..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+            Dërgo Mesazhin
+          </button>
+          <div id="formSuccess" style="display:none;padding:1rem;background:rgba(201,162,48,0.1);border:1px solid var(--gold);border-radius:2px;color:var(--gold);font-size:0.85rem;font-weight:600;margin-top:0.5rem;">
+            ✓ Mesazhi u dërgua me sukses! Do t'ju kontaktojmë së shpejti.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo.png" alt="MUÇAJ DEKOR"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="footer-logo-text">
+        <span class="fl1">MUÇAJ</span>
+        <span class="fl2">DEKOR</span>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-services">
+      <span>Punime Gipsi</span> • Gips Karton • <span>Tavane Dekorative</span> • Ndriçim LED •
+      <span>Dekore Allçiu</span> • Bojra Dekorative • <span>Patinime dhe Lyerje</span> •
+      Parket Laminat • <span>Rikonstruksione Interieri</span>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 MUÇAJ DEKOR — Tiranë, Shqipëri. Të gjitha të drejtat e rezervuara.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/355682777728" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Instagram Embed Script -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+<script>
+  /* Navbar */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+  /* Mobile menu */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  /* Smooth scroll with nav offset */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* Contact form → Email (Formsubmit) + WhatsApp */
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form    = document.getElementById('contactForm');
+    const name    = document.getElementById('fname').value;
+    const phone   = document.getElementById('fphone').value;
+    const service = document.getElementById('fservice').value;
+    const message = document.getElementById('fmsg').value;
+
+    /* 1. Send email via Formsubmit.co */
+    const formData = new FormData(form);
+    fetch('https://formsubmit.co/mucajdekor@gmail.com', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    /* 2. Also open WhatsApp */
+    const text = encodeURIComponent(
+      `Përshëndetje MUÇAJ DEKOR!\n\nEmri: ${name}\nTelefon: ${phone}\nShërbimi: ${service || 'Jo specifik'}\nMesazhi: ${message || 'Kërkoj ofertë falas.'}`
+    );
+    window.open(`https://wa.me/355682777728?text=${text}`, '_blank');
+
+    form.reset();
+    const s = document.getElementById('formSuccess');
+    s.style.display = 'block';
+    setTimeout(() => s.style.display = 'none', 5000);
+  }
+
+  /* Scroll-in animations */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.style.opacity = '1';
+        en.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.service-card,.feature-item,.testimonial-card,.process-step,.masonry-item,.insta-embed-wrap').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(22px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
